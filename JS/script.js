@@ -66,3 +66,40 @@ document.getElementById('next').addEventListener('click', function() {
     displayWord(currentWordIndex);
   }
 });
+//スライドで単語カードを変更する機能
+document.getElementById('card-container').addEventListener('touchstart', handleTouchStart, false);        
+document.getElementById('card-container').addEventListener('touchmove', handleTouchMove, false);
+
+var xDown = null;                                                        
+
+function getTouches(evt) {
+  return evt.touches ||             // browser API
+         evt.originalEvent.touches; // jQuery
+}                                                     
+
+function handleTouchStart(evt) {
+    const firstTouch = getTouches(evt)[0];                                      
+    xDown = firstTouch.clientX;                                      
+};                                                
+
+function handleTouchMove(evt) {
+    if ( ! xDown ) {
+        return;
+    }
+
+    var xUp = evt.touches[0].clientX;                                    
+    var xDiff = xDown - xUp;
+
+    if ( xDiff > 0 ) {
+        /* left swipe */ 
+        currentWordIndex = (currentWordIndex + 1) % wordsData.length;
+        displayWord(currentWordIndex);
+    } else {
+        /* right swipe */
+        currentWordIndex = (currentWordIndex - 1 + wordsData.length) % wordsData.length;
+        displayWord(currentWordIndex);
+    }
+    
+    /* reset values */
+    xDown = null;                                             
+};
