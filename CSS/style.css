@@ -1,0 +1,110 @@
+@charset "utf-8";
+/* 全体の基本スタイル */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #111;
+  color: #fff;
+  font-family: 'Helvetica Neue', sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/* ヘッダー部分のタイトル */
+.header-title {
+  font-size: 3em; /* タイトルのサイズを調整 */
+  position: absolute;
+  top: 5vh; /* 上から10vhの位置に */
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+}
+
+.upload-label {
+  display: inline-block;
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  position: absolute;
+  bottom: 10vh; /* 下から10vhの位置に */
+}
+
+#card-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: absolute;
+  width: 80%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.flashcard {
+  background-color: #fff;
+  color: #000; /* テキストの色を黒に設定 */
+  width: 40vw; /* カードの幅をビューポートに対する割合で指定 */
+  height: 50vh; /* カードの高さをビューポートに対する割合で指定 */
+  max-width: 600px; /* カードの最大幅 */
+  max-height: 300px; /* カードの最大高さ */
+  background-color: #fff;
+  font-size: 35px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  padding: 2em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ボタンとカードコンテナのスタイル調整 */
+#card-container {
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin-top: -350px; /* カードを上に移動 */
+}
+
+#prev, #next {
+  font-size: 2em;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+#counter{
+  position: relative;
+  bottom:0px; /* ボタンを下部に配置 */
+  
+  font-size: 10px;
+
+}
+
+
+/* CSVアップロードボタンのスタイル */
+.upload-label {
+  position: absolute;
+  bottom: 50px; /* ボタンを下部に配置 */
+  left: 50%; /* 左から50%の位置に */
+  transform: translateX(-50%); /* 中心に合わせるためにX軸方向に-50% */
+  font-size: 1em;
+  padding: 1em 2em;
+}
+
+/* ヘッダータイトルのスタイル */
+.header-title {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 2em;
+  z-index: 10;
+}
