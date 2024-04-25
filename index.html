@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>日本語と中国語の単語学習</title>
+  <link href="CSS/style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+  <div class="header-title">日本語単語練習</div>
+
+  <div id="card-container">
+    <button id="prev">＜</button>
+
+    <div id="card" class="flashcard">
+      <div id="japanese" class="show">
+        <div id="word"></div>
+        <div id="ruby"></div>
+      </div>
+      <div id="chinese" class="hide">
+        <div id="translation"></div>
+      </div>
+    </div>
+
+    <button id="next">＞</button>
+    <div id="counter">0/0</div> <!-- ここにカウンターを追加 -->
+  </div>
+  
+  <!-- CSVファイルの読み込みボタン -->
+  <label for="csvFileInput" class="upload-label">
+    CSVファイルを選択して単語カードを表示
+  </label>
+  <input type="file" id="csvFileInput" accept=".csv">
+
+  <audio id="audio" src=""></audio>
+
+  <script type="text/javascript" src="JS/script.js"></script>
+</body>
+</html>
