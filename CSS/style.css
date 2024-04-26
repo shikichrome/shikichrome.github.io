@@ -108,7 +108,7 @@ html, body {
   font-size: 2em;
   z-index: 10;
 }
-@media (max-width: 350px) {
+@media (max-width: 768px) {
   /* ヘッダータイトルのスタイル */
  /* ヘッダータイトルのスタイル */
   .header-title {
@@ -124,7 +124,7 @@ html, body {
   .flashcard {
     position: relative; /* absoluteからrelativeに変更 */
     width: 100%; /* 幅を100%に */
-    height: calc(100vh - 40px); /* 高さをヘッダーとボタンの高さを考慮して調整 */
+    height: auto; /* 高さをヘッダーとボタンの高さを考慮して調整 */
     margin-top: 40px; /* ヘッダーの高さ分だけ上にマージンを取る */
   }
 
