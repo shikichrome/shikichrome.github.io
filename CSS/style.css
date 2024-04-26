@@ -133,19 +133,17 @@ html, body {
   }
 
   /* ボタンのスタイル */
-  #prev, #next {
-    font-size: 5vh; /* ボタンのサイズをビューポート高さに基づいて設定 */
-    width: 10vh; /* ボタンの幅をビューポート高さに基づいて設定 */
-    height: 10vh; /* ボタンの高さをビューポート高さに基づいて設定 */
-    line-height: 10vh; /* ボタン内のテキストの行の高さを設定 */
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
+   #prev, #next {
+    /* ...他のスタイル... */
+    width: 20%; /* 画面の半分の幅 */
+    height: 100vh; /* 画面の高さ全体 */
+    top: 0; /* トップに固定 */
+    transform: none; /* ボタンの中心位置の調整を解除 */
+    z-index: 5; /* タッチイベントを感知するために前面に出す */
   }
 
   #prev { left: 0; } /* 左ボタンを左端に */
-  #next { right: 0; } /* 右ボタンを右端に */
-
+  #next { right: 0; } /* 右ボタンを右端に *
   /* CSVアップロードボタンのスタイル */
   .upload-label {
     bottom: 5vh; /* 画面下からの位置を調整 */
