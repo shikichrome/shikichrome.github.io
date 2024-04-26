@@ -108,7 +108,7 @@ html, body {
   font-size: 2em;
   z-index: 10;
 }
-@media (max-width: 768px) {
+@media (max-width: 350px) {
   /* ヘッダータイトルのスタイル */
  /* ヘッダータイトルのスタイル */
   .header-title {
