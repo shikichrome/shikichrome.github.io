@@ -122,7 +122,7 @@ html, body {
   /* フラッシュカードのスタイル */
   .flashcard {
     width: 90vw; /* 画面の幅の90%に設定 */
-    height: 105vw; /* 高さを幅の1.5倍に設定 (4:3比ではなく) */
+    height: 85vw; /* 高さを幅の1.5倍に設定 (4:3比ではなく) */
     max-width: none; /* 最大幅の設定を解除 */
     max-height: none; /* 最大高さの設定を解除 */
     margin-top: 10vh; /* タイトル下の余白を設定 */
@@ -132,11 +132,10 @@ html, body {
     transform: none; /* 変形を解除 */
   }
 
-  /* ボタンのスタイル */
-   #prev, #next {
+ #prev, #next {
     /* ...他のスタイル... */
     width: 20%; /* 画面の半分の幅 */
-    height: 100vh; /* 画面の高さ全体 */
+    height: 0; /* 画面の高さ全体 */
     top: 0; /* トップに固定 */
     transform: none; /* ボタンの中心位置の調整を解除 */
     z-index: 5; /* タッチイベントを感知するために前面に出す */
@@ -144,6 +143,7 @@ html, body {
 
   #prev { left: 0; } /* 左ボタンを左端に */
   #next { right: 0; } /* 右ボタンを右端に *
+
   /* CSVアップロードボタンのスタイル */
   .upload-label {
     bottom: 5vh; /* 画面下からの位置を調整 */
