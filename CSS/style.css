@@ -121,10 +121,10 @@ html, body {
     z-index: 10;
   }
   /* フラッシュカードのスタイル */
-  .flashcard {
+ .flashcard {
     position: relative; /* absoluteからrelativeに変更 */
     width: 100%; /* 幅を100%に */
-    height: auto; /* 高さをヘッダーとボタンの高さを考慮して調整 */
+    height: calc(100vh - 40px); /* 高さをヘッダーとボタンの高さを考慮して調整 */
     margin-top: 40px; /* ヘッダーの高さ分だけ上にマージンを取る */
   }
 
