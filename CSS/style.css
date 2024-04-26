@@ -152,7 +152,7 @@ html, body {
   /* カウンターの位置を調整 */
   #counter {
     position: absolute;
-    bottom: 15vh; /* ボタンから少し上に */
+    top: 1vh; /* ボタンから少し上に */
     left: 50%;
     transform: translateX(-50%);
     font-size: 4vh; /* フォントサイズをビューポート高さに基づいて設定 */
