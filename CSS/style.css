@@ -108,7 +108,7 @@ html, body {
   font-size: 2em;
   z-index: 10;
 }
-@media (max-width: 350px) {
+@media (max-width: 768px) {
   /* ヘッダータイトルのスタイル */
  /* ヘッダータイトルのスタイル */
   .header-title {
@@ -116,16 +116,23 @@ html, body {
     position: fixed;
     top: 0; /* トップに固定 */
     width: 100%; /* 幅100% */
-    background-color: #000; /* 背景色を黒に */
-    padding: 10px 0; /* 上下にパディング */
+    padding: 1em 0; /* 上下の余白を調整 */
+    background-color: #000; /* 背景色を設定 */
     z-index: 10;
   }
+　#card-container {
+    /* ...他のスタイル... */
+    height: auto; /* 高さの指定をautoに */
+    padding: 1em 0; /* 上下の余白を調整 */
+  }
   /* フラッシュカードのスタイル */
- .flashcard {
-    position: relative; /* absoluteからrelativeに変更 */
-    width: 100%; /* 幅を100%に */
-    height: calc(100vh - 40px); /* 高さをヘッダーとボタンの高さを考慮して調整 */
-    margin-top: 40px; /* ヘッダーの高さ分だけ上にマージンを取る */
+  .flashcard {
+    width: 80vw; /* 画面の幅の80%に */
+    height: calc(80vw * (4 / 3)); /* カードの高さを幅の4:3比で設定 */
+    margin: 0 auto; /* 上下マージンを0、左右は自動で中央揃え */
+    position: relative; /* positionの指定 */
+    top: 5em; /* タイトルからの距離を設定 */
+    transform: translateY(-50%); /* 中央寄せのために調整 */
   }
 
   /* CSVアップロードボタンのスタイル */
@@ -139,10 +146,15 @@ html, body {
 
   /* 矢印ボタンのスタイル */
   #prev, #next {
-    position: fixed;
-    bottom: 70px; /* CSVアップロードボタンより少し上に */
-    z-index: 5;
+    /* 矢印ボタンの位置を調整 */
+    position: absolute;
+    top: 50%; /* 親要素から50%の位置 */
+    transform: translateY(-50%); /* Y軸方向に-50%移動して中央揃え */
   }
+
+  #prev { left: 1em; } /* 左ボタンを左端に */
+  #next { right: 1em; } /* 右ボタンを右端に */
+
 
   #prev { left: 10px; } /* 左ボタンを左端に */
   #next { right: 10px; } /* 右ボタンを右端に */
