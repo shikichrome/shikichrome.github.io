@@ -122,7 +122,7 @@ html, body {
   /* フラッシュカードのスタイル */
   .flashcard {
     width: 90vw; /* 画面の幅の90%に設定 */
-    height: 135vw; /* 高さを幅の1.5倍に設定 (4:3比ではなく) */
+    height: 105vw; /* 高さを幅の1.5倍に設定 (4:3比ではなく) */
     max-width: none; /* 最大幅の設定を解除 */
     max-height: none; /* 最大高さの設定を解除 */
     margin-top: 10vh; /* タイトル下の余白を設定 */
